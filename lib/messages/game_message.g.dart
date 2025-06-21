@@ -1,0 +1,24 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'game_message.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+GameMessage _$GameMessageFromJson(Map<String, dynamic> json) => GameMessage(
+      type: json['type'] as String,
+      data: json['data'] as Map<String, dynamic>,
+      playerId: json['playerId'] as String?,
+      timestamp: json['timestamp'] == null
+          ? null
+          : DateTime.parse(json['timestamp'] as String),
+    );
+
+Map<String, dynamic> _$GameMessageToJson(GameMessage instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'data': instance.data,
+      'playerId': instance.playerId,
+      'timestamp': instance.timestamp.toIso8601String(),
+    };

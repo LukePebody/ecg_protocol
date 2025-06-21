@@ -1,0 +1,13 @@
+name: ecg_protocol
+description: Shared networking protocol for ECG applications
+version: 1.0.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  json_annotation: ^4.8.1
+  
+dev_dependencies:
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
