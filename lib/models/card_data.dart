@@ -24,6 +24,7 @@ class CardData {
     this.metadata,
   });
 
-  factory CardData.fromJson(Map<String, dynamic> json) => _$CardDataFromJson(json);
+  factory CardData.fromJson(Map<String, dynamic> json) =>
+      _$CardDataFromJson(json);
   Map<String, dynamic> toJson() => _$CardDataToJson(this);
 }

@@ -17,7 +17,8 @@ class GameMessage {
     DateTime? timestamp,
   }) : timestamp = timestamp ?? DateTime.now();
 
-  factory GameMessage.fromJson(Map<String, dynamic> json) => _$GameMessageFromJson(json);
+  factory GameMessage.fromJson(Map<String, dynamic> json) =>
+      _$GameMessageFromJson(json);
   Map<String, dynamic> toJson() => _$GameMessageToJson(this);
 
   // Factory constructors for common message types
@@ -29,7 +30,8 @@ class GameMessage {
     );
   }
 
-  factory GameMessage.gameState(Map<String, dynamic> state, {String? playerId}) {
+  factory GameMessage.gameState(Map<String, dynamic> state,
+      {String? playerId}) {
     return GameMessage(
       type: 'game_state',
       data: state,
@@ -37,7 +39,9 @@ class GameMessage {
     );
   }
 
-  factory GameMessage.playerAction(String action, Map<String, dynamic> actionData, {String? playerId}) {
+  factory GameMessage.playerAction(
+      String action, Map<String, dynamic> actionData,
+      {String? playerId}) {
     return GameMessage(
       type: 'player_action',
       data: {'action': action, ...actionData},
