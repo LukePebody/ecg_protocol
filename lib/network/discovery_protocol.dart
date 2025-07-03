@@ -3,20 +3,20 @@ class DiscoveryConstants {
   // mDNS Service Discovery
   static const String mdnsServiceType = '_ecg-table._tcp';
   static const String mdnsServiceName = 'ECG Table Game';
-  
+
   // Discovery timeouts
   static const Duration discoveryTimeout = Duration(seconds: 10);
   static const Duration hostCheckTimeout = Duration(seconds: 2);
   static const Duration bluetoothTimeout = Duration(seconds: 3);
-  
+
   // Network scanning
   static const List<int> commonPorts = [8080, 3000, 8000, 8888, 9000];
   static const int maxNetworkHosts = 254;
-  
+
   // Service identification
   static const String serviceIdentifier = 'ecg-table';
   static const String protocolVersion = '1.0.0';
-  
+
   // Endpoints
   static const String infoEndpoint = '/info';
   static const String joinEndpoint = '/join';
@@ -25,11 +25,11 @@ class DiscoveryConstants {
 }
 
 /// Connection method types for host discovery
-enum ConnectionMethod { 
-  wifi, 
-  bluetooth, 
+enum ConnectionMethod {
+  wifi,
+  bluetooth,
   manual;
-  
+
   String get displayName {
     switch (this) {
       case ConnectionMethod.wifi:
@@ -67,7 +67,7 @@ class GameHost {
   });
 
   String get displayName => '$name ($gameCode)';
-  
+
   String get connectionString {
     switch (method) {
       case ConnectionMethod.wifi:
@@ -78,7 +78,7 @@ class GameHost {
         return '$address:$port';
     }
   }
-  
+
   /// Create from service discovery info
   factory GameHost.fromServiceInfo(Map<String, dynamic> info) {
     return GameHost(
@@ -92,16 +92,16 @@ class GameHost {
       version: info['version'],
     );
   }
-  
+
   Map<String, dynamic> toJson() => {
-    'name': name,
-    'address': address,
-    'port': port,
-    'method': method.name,
-    'gameCode': gameCode,
-    'playerCount': playerCount,
-    if (deviceId != null) 'deviceId': deviceId,
-    if (capabilities != null) 'capabilities': capabilities,
-    if (version != null) 'version': version,
-  };
+        'name': name,
+        'address': address,
+        'port': port,
+        'method': method.name,
+        'gameCode': gameCode,
+        'playerCount': playerCount,
+        if (deviceId != null) 'deviceId': deviceId,
+        if (capabilities != null) 'capabilities': capabilities,
+        if (version != null) 'version': version,
+      };
 }

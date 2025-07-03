@@ -6,9 +6,11 @@ abstract class NetworkEvent {
   factory NetworkEvent.hostingStopped() = HostingStoppedEvent;
   factory NetworkEvent.clientConnected(int count) = ClientConnectedEvent;
   factory NetworkEvent.clientDisconnected(int count) = ClientDisconnectedEvent;
-  factory NetworkEvent.messageReceived(Map<String, dynamic> message) = MessageReceivedEvent;
+  factory NetworkEvent.messageReceived(Map<String, dynamic> message) =
+      MessageReceivedEvent;
   factory NetworkEvent.discoveryStarted() = DiscoveryStartedEvent;
-  factory NetworkEvent.discoveryCompleted(List<dynamic> hosts) = DiscoveryCompletedEvent;
+  factory NetworkEvent.discoveryCompleted(List<dynamic> hosts) =
+      DiscoveryCompletedEvent;
   factory NetworkEvent.hostDiscovered(dynamic host) = HostDiscoveredEvent;
 }
 
