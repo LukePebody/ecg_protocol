@@ -8,7 +8,7 @@ class CardData {
   final String name;
   final String faceImageUrl;
   final String backImageUrl;
-  final String exposedFaceImageUrl; // Simple card image for mobile/hand view
+  final String? exposedFaceImageUrl; // Simple card image for mobile/hand view
   final bool isFaceUp;
   final int ranking;
   final String? suit;
@@ -19,7 +19,7 @@ class CardData {
     required this.name,
     required this.faceImageUrl,
     required this.backImageUrl,
-    required this.exposedFaceImageUrl,
+    this.exposedFaceImageUrl,
     required this.isFaceUp,
     required this.ranking,
     this.suit,
