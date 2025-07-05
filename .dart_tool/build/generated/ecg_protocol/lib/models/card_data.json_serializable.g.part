@@ -7,7 +7,7 @@ CardData _$CardDataFromJson(Map<String, dynamic> json) => CardData(
       name: json['name'] as String,
       faceImageUrl: json['faceImageUrl'] as String,
       backImageUrl: json['backImageUrl'] as String,
-      exposedFaceImageUrl: json['exposedFaceImageUrl'] as String,
+      exposedFaceImageUrl: json['exposedFaceImageUrl'] as String?,
       isFaceUp: json['isFaceUp'] as bool,
       ranking: (json['ranking'] as num).toInt(),
       suit: json['suit'] as String?,
