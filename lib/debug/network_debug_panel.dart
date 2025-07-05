@@ -47,7 +47,8 @@ class NetworkDebugPanel extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        const Icon(Icons.network_check, color: Colors.white, size: 16),
+                        const Icon(Icons.network_check,
+                            color: Colors.white, size: 16),
                         const SizedBox(width: 8),
                         const Text(
                           'Network Debug Log',
@@ -59,7 +60,8 @@ class NetworkDebugPanel extends StatelessWidget {
                         ),
                         const Spacer(),
                         IconButton(
-                          icon: const Icon(Icons.clear, color: Colors.white, size: 16),
+                          icon: const Icon(Icons.clear,
+                              color: Colors.white, size: 16),
                           padding: EdgeInsets.zero,
                           constraints: const BoxConstraints(),
                           onPressed: debugService.clearMessages,
@@ -67,7 +69,8 @@ class NetworkDebugPanel extends StatelessWidget {
                         ),
                         const SizedBox(width: 8),
                         IconButton(
-                          icon: const Icon(Icons.close, color: Colors.white, size: 16),
+                          icon: const Icon(Icons.close,
+                              color: Colors.white, size: 16),
                           padding: EdgeInsets.zero,
                           constraints: const BoxConstraints(),
                           onPressed: debugService.hideDebugPanel,
@@ -83,7 +86,8 @@ class NetworkDebugPanel extends StatelessWidget {
                       padding: const EdgeInsets.all(4),
                       itemCount: debugService.messages.length,
                       itemBuilder: (context, index) {
-                        final message = debugService.messages[debugService.messages.length - 1 - index];
+                        final message = debugService
+                            .messages[debugService.messages.length - 1 - index];
                         return _buildMessageTile(message);
                       },
                     ),
@@ -212,7 +216,8 @@ class NetworkDebugButton extends StatelessWidget {
           right: 20,
           child: FloatingActionButton.small(
             heroTag: 'network_debug',
-            backgroundColor: debugService.isVisible ? Colors.red[700] : Colors.blue[700],
+            backgroundColor:
+                debugService.isVisible ? Colors.red[700] : Colors.blue[700],
             child: Icon(
               debugService.isVisible ? Icons.close : Icons.bug_report,
               color: Colors.white,

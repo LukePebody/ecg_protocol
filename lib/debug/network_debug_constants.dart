@@ -1,5 +1,5 @@
 /// Network debug configuration constants
-/// 
+///
 /// Set [kNetworkDebugMode] to true to enable network debugging features
 /// in both table and hand applications. This is a compile-time flag.
 

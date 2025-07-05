@@ -40,12 +40,12 @@ class NetworkDebugService extends ChangeNotifier {
     if (!kNetworkDebugMode) return;
 
     _messages.add(message);
-    
+
     // Keep only the last kMaxDebugMessages
     if (_messages.length > kMaxDebugMessages) {
       _messages.removeAt(0);
     }
-    
+
     notifyListeners();
   }
 
